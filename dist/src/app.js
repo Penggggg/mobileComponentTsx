@@ -1,6 +1,23 @@
 "use strict";
+var __extends = (this && this.__extends) || function (d, b) {
+    for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p];
+    function __() { this.constructor = d; }
+    d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
+};
 var React = require('react');
 var ReactDom = require('react-dom');
 var button_1 = require('../component/button');
-ReactDom.render(React.createElement(button_1.default, null), document.getElementById('peng'));
+var Test = (function (_super) {
+    __extends(Test, _super);
+    function Test() {
+        _super.apply(this, arguments);
+    }
+    Test.prototype.render = function () {
+        return (React.createElement("div", null, 
+            React.createElement(button_1.default, {blue: true, loading: true}, "Button")
+        ));
+    };
+    return Test;
+}(React.PureComponent));
+ReactDom.render(React.createElement(Test, null), document.getElementById('peng'));
 //# sourceMappingURL=app.js.map

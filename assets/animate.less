@@ -1,0 +1,34 @@
+// 旋转
+@rotate-init: rotate(0deg);
+@rotate-end: rotate(360deg);
+.animate-rotate-mix() {
+    from{
+        transform: @rotate-init;
+        -webkit-transform: @rotate-init;
+        -ms-transform: @rotate-init;
+        -o-transform: @rotate-init;
+        -moz-transform: @rotate-init;}
+    to{
+        transform: @rotate-end;
+        -webkit-transform: @rotate-end;
+        -ms-transform: @rotate-end;
+        -o-transform: @rotate-end;
+        -moz-transform: @rotate-end;}
+}
+
+// 旋转
+@keyframes rotate {
+    .animate-rotate-mix();
+}
+@-webkit-keyframes rotate {
+    .animate-rotate-mix();
+}
+@-o-keyframes rotate {
+    .animate-rotate-mix();
+}
+@-moz-@keyframes rotate {
+    .animate-rotate-mix();
+}
+@-ms-keyframes rotate {
+    .animate-rotate-mix();
+}

@@ -1,0 +1,228 @@
+@textNormal: #666;
+@white: #fff;
+@light-bg: rgba(236, 236, 236, 1);
+@light-active: rgba(252, 252, 252, 1);
+@light-darken: rgba(221, 221, 221, 1);
+@blue-bg: rgba(38, 198, 218, 1);
+@blue-darken: rgba(1, 186, 210, 1);
+@green-bg: rgba(112, 212, 69, 1);
+@green-darken: rgba(96, 190, 41, 1);
+@pink-bg:rgba(240, 86, 173, 1);
+@pink-darken: rgba(230, 37, 156, 1);
+@red-bg:rgba(255, 86, 88, 1);
+@red-darken: rgba(224, 21, 21, 1);
+@dark-bg: rgba(50, 50, 50, 1);
+@transparent: rgba(255, 255, 255, 0);
+
+@transition: all ease 0.3s;
+@defaultShadow: 2px 3px 6px -2px rgba(152,152,152,1);
+@pressShadow-out: 2px 4px 7px -2px rgba(152,152,152,1);
+
+
+// 一般属性
+.hzp-btn{
+    display: inline;
+    outline: 1px solid @transparent;
+    border: none;
+    border-radius: 4px;
+    text-align: center;
+    transition: @transition;
+    -webkit-transition: @transition;
+    -moz-transition: @transition;
+    -o-transition: @transition;
+    -ms-transition: @transition;
+    box-shadow: @defaultShadow;
+    -webkit-box-shadow: @defaultShadow;
+    -ms-box-shadow: @defaultShadow;
+    -moz-box-shadow:@defaultShadow;
+    font-family: "Helvetica Neue",Helvetica,"PingFang SC","Hiragino Sans GB","Microsoft YaHei","微软雅黑",Arial,sans-serif;
+}
+// 点击
+.hzp-btn:active{
+    outline: 1px solid @transparent;
+    border: none;
+    box-shadow: @pressShadow-out;
+}
+// 行内/块级
+.hzp-btn.btn-block{
+    width: 100%;
+    display: block;
+}
+.hzp-btn.btn-inline{
+    display: inline;;
+}
+// 尺寸
+.hzp-btn.size-normalsize {
+    padding: 9px 15px;
+    font-weight: normal;
+    font-size: 14px;
+}
+.hzp-btn.size-large {
+    padding: 12px 20px;
+    font-weight: normal;
+    font-size: 17px;
+}
+.hzp-btn.size-small {
+    padding: 5px 8px;
+    font-weight: normal;
+    font-size: 12px;
+}
+// 类型
+.hzp-btn.type-normaltype{
+
+}
+.hzp-btn.type-outline{
+
+}
+.hzp-btn.type-clear{
+
+}
+// 形状
+.hzp-btn.shape-round{
+    display: inline ;
+    padding: 0 ;
+    border-radius: 50%;
+    overflow: hidden;
+    text-align: center;
+}
+.hzp-btn.size-small.shape-round{
+    width: 30px ; height: 30px ;
+}
+.hzp-btn.size-normalsize.shape-round{
+    width: 40px ; height: 40px ;
+}
+.hzp-btn.size-large.shape-round{
+    width: 50px ; height: 50px ;
+}
+// icon
+.hzp-btn img{
+    margin-right: 5px;
+}
+
+
+
+
+// 颜色
+.btn-light{
+    background: @light-bg;
+    color: @textNormal;
+}
+// white
+.btn-light:active{
+    background: @light-darken;
+}
+.btn-light.type-outline,
+.btn-light.type-clear{
+    background: @white !important;
+    box-shadow: 0 0 0 1px @light-bg;
+    color: @light-bg;
+}
+.btn-light.type-clear{
+    box-shadow: none !important;
+}
+.btn-light.type-clear:active{
+    background: @light-active !important;
+}
+
+// blue
+.btn-blue{
+    background: @blue-bg;
+    color: @white;
+}
+.btn-blue:active{
+    background: @blue-darken;
+}
+.btn-blue.type-outline,
+.btn-blue.type-clear{
+    background: @white !important;
+    box-shadow: 0 0 0 1px @blue-bg;
+    color: @blue-bg;
+}
+.btn-blue.type-clear{
+    box-shadow: none !important;
+}
+.btn-blue.type-clear:active{
+    background: @light-active !important;
+}
+
+// green
+.btn-green{
+    background: @green-bg;
+    color: @white;
+}
+.btn-green:active{
+    background: @green-darken;
+}
+.btn-green.type-outline,
+.btn-green.type-clear{
+    background: @white !important;
+    box-shadow: 0 0 0 1px @green-bg;
+    color: @green-bg;
+}
+.btn-green.type-clear{
+    box-shadow: none !important;
+}
+.btn-green.type-clear:active{
+    background: @light-active !important;
+}
+
+// pink
+.btn-pink{
+    background: @pink-bg;
+    color: @white;
+}
+.btn-pink:active{
+    background: @pink-darken;
+}
+.btn-pink.type-outline,
+.btn-pink.type-clear{
+    background: @white !important;
+    box-shadow: 0 0 0 1px @pink-bg;
+    color: @pink-bg;
+}
+.btn-pink.type-clear{
+    box-shadow: none;
+}
+.btn-pink.type-clear:active{
+    background: @light-active !important;
+}
+
+// red
+
+.btn-red{
+    background: @red-bg;
+    color: @white;
+}
+.btn-red:active{
+    background: @red-darken;
+}
+.btn-red.type-outline,
+.btn-red.type-clear{
+    background: @white !important;
+    box-shadow: 0 0 0 1px @red-bg;
+    color: @red-bg;
+}
+.btn-red.type-clear{
+    box-shadow: none;
+}
+.btn-red.type-clear:active{
+    background: @light-active !important;
+}
+
+// black
+.btn-dark{
+    background: @dark-bg;
+    color: @white;
+}
+.btn-dark.type-outline,
+.btn-dark.type-clear{
+    background: @white !important;
+    box-shadow: 0 0 0 1px @dark-bg;
+    color: @dark-bg;
+}
+.btn-dark.type-clear{
+    box-shadow: none
+}
+.btn-black.type-clear:active{
+    background: @light-active !important;
+}
