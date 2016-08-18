@@ -18,8 +18,13 @@ class Test extends React.PureComponent<any, any> {
         let { loading } = this.state ;
         return (
             <div onClick={()=>{}}>
-                <Button blue loading={ loading }
-                    onClick={ (e)=>this.setState({ loading: true }) } >Button</Button>
+                <Button  loading={ loading } icon="icon-untitled79"  round large
+                    onClick={ (e)=>this.setState({ loading: true }) } ></Button>
+                <Button blue icon="icon-untitled83"  round large ></Button>
+                <Button green icon="icon-untitled145"  round large ></Button>
+                <Button pink icon="icon-untitled53"  round large></Button>
+                <Button red icon="icon-untitled32"  round large></Button>
+                <Button dark icon="icon-clover1193374easyiconnet" round large ></Button>
             </div>
         )
     }

@@ -19,8 +19,12 @@ var Test = (function (_super) {
         var _this = this;
         var loading = this.state.loading;
         return (React.createElement("div", {onClick: function () { }}, 
-            React.createElement(button_1.default, {blue: true, loading: loading, onClick: function (e) { return _this.setState({ loading: true }); }}, "Button")
-        ));
+            React.createElement(button_1.default, {loading: loading, icon: "icon-untitled79", round: true, large: true, onClick: function (e) { return _this.setState({ loading: true }); }}), 
+            React.createElement(button_1.default, {blue: true, icon: "icon-untitled83", round: true, large: true}), 
+            React.createElement(button_1.default, {green: true, icon: "icon-untitled145", round: true, large: true}), 
+            React.createElement(button_1.default, {pink: true, icon: "icon-untitled53", round: true, large: true}), 
+            React.createElement(button_1.default, {red: true, icon: "icon-untitled32", round: true, large: true}), 
+            React.createElement(button_1.default, {dark: true, icon: "icon-clover1193374easyiconnet", round: true, large: true})));
     };
     return Test;
 }(React.PureComponent));
