@@ -1,19 +1,19 @@
 # mobileComponentTsx
 ### hzp's personal component lib made by React / Typescript
 ### these components are combined the goods between [ant design](http://ant.design/) and [ionic2](http://ionicframework.com/docs/v2/)
-***
+
 ### my special:
 1. simple and easy way to set components props:
     `<Button round blue />` is equal to `<Button theme="blue" shape="round" />`
 2. comfortable and colorful theme make by css3
-***
+
 ## Components
 ### Icon
 the `./assets/font/demo.html` will show you all the icons that were downloaded from [AliIconFont](http://www.iconfont.cn/)
-***
+
 ### Button
-#### a Button Component, which can be composed by different options from your code
-#### set Button easliy `<Button blue round icon=".." />` if the value of props you want is default , you dont need to set this props in `<Button />`
+### a Button Component, which can be composed by different options from your code
+### set Button easliy `<Button blue round icon=".." />` if the value of props you want is default , you dont need to set this props in `<Button />`
 1. theme: string
     * light(default)
     * blue
