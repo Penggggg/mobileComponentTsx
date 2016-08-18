@@ -10,7 +10,6 @@ export default class ButtonIcon extends React.PureComponent<IButtonIconProps, an
 
     render() {
         let { icon, loading } = this.props;
-        console.log(icon)
         let c = classnames(
             `iconfont`,
             icon ? icon : '',
@@ -18,7 +17,7 @@ export default class ButtonIcon extends React.PureComponent<IButtonIconProps, an
         )
 
         return (
-            icon ? <span className={ c }></span> : <i></i>
+            icon ? <span className={ c }></span> : <span></span>
         )
     }
 }

@@ -8,12 +8,18 @@ import * as ReactDom from 'react-dom';
 import Button from '../component/button';
 
 class Test extends React.PureComponent<any, any> {
+    constructor() {
+        super();
+        this.state = {
+            loading: false
+        }
+    }
     render () {
+        let { loading } = this.state ;
         return (
-            <div>
-                <Button blue loading >
-                    Button
-                </Button>
+            <div onClick={()=>{}}>
+                <Button blue loading={ loading }
+                    onClick={ (e)=>this.setState({ loading: true }) } >Button</Button>
             </div>
         )
     }

@@ -10,11 +10,16 @@ var button_1 = require('../component/button');
 var Test = (function (_super) {
     __extends(Test, _super);
     function Test() {
-        _super.apply(this, arguments);
+        _super.call(this);
+        this.state = {
+            loading: false
+        };
     }
     Test.prototype.render = function () {
-        return (React.createElement("div", null, 
-            React.createElement(button_1.default, {blue: true, loading: true}, "Button")
+        var _this = this;
+        var loading = this.state.loading;
+        return (React.createElement("div", {onClick: function () { }}, 
+            React.createElement(button_1.default, {blue: true, loading: loading, onClick: function (e) { return _this.setState({ loading: true }); }}, "Button")
         ));
     };
     return Test;

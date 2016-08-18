@@ -16,10 +16,6 @@ let _loading = [ true ];
 export default class Button extends React.PureComponent<IProps, any> {
     // static properties
     //static Icon: any;
-    // inistance properties
-    theme_classname: string ;
-    constructor() { super() }
-
     static defaultProps = {
         light: true, // default theme
         inline: true, // default dispaly
@@ -28,9 +24,15 @@ export default class Button extends React.PureComponent<IProps, any> {
         normalshape: true, // default shape
         loading: false // default load
     }
+    // inistance properties
+    theme_classname: string ;
+    constructor() { super() }
 
+
+
+    // 初始化
     componentWillMount() {
-        let { theme, display, size, type, shape, loading } = this.props;
+        let { theme, display, size, type, shape, loading, icon } = this.props;
         let _p = this.props ;
         this.theme_classname = classnames(
             `hzp-btn`,
@@ -38,14 +40,19 @@ export default class Button extends React.PureComponent<IProps, any> {
             display ? `btn-${display}` : `btn-${_fitlerProps(_p, _dispaly)}`,
             size ? `size-${size}` : `size-${_fitlerProps(_p, _size)}`,
             type ? `type-${type}` : `type-${_fitlerProps(_p, _type)}`,
-            shape ? `shape-${shape}` : `shape-${_fitlerProps(_p, _shape)}`
+            shape ? `shape-${shape}` : `shape-${_fitlerProps(_p, _shape)}`,
+            _p.children ? `` : `just-icon`
         )
     }
 
+    componentWillReceiveProps(_np: IProps) {
+        let { loading } = _np ;
+        this.theme_classname = classnames(this.theme_classname, loading ? `loading` : ``);
+    }
+
     render() {
-        let { icon, loading, iconRight } = this.props;
-        console.log(icon)
-        return (<button className={ this.theme_classname }>
+        let { icon, loading, iconRight, onClick } = this.props;
+        return (<button className={ this.theme_classname } onClick={ onClick }>
             {
                 icon ?
                     loading ?
@@ -79,7 +86,11 @@ export default class Button extends React.PureComponent<IProps, any> {
     }
 }
 
-interface IProps {
+interface IProps{
+    // React stuff
+    style?: React.CSSProperties;
+    onClick? : React.FormEventHandler;
+    // 自定义
     loading?: boolean; // 加载动画
     icon?: string ; // 默认为左边
     iconRight? : string;
